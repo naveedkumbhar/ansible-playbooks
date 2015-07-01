@@ -1,0 +1,15 @@
+---
+- name: install and start apache
+  hosts: centos
+  sudo: true
+  sudo_user: root
+
+  tasks:
+  - name: install httpd
+    yum: name=httpd state=present
+
+  - name: start httpd
+    service: name=httpd state=running
+  
+  - name: enable on boot
+    service: name=httpd enabled=yes
