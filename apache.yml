@@ -13,3 +13,6 @@
   
   - name: enable on boot
     service: name=httpd enabled=yes
+  
+  - name: Copy Index file to web directory
+    copy: src=/root/index.html dest=/var/www/html/ mode=755
