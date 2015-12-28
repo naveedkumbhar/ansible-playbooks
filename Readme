@@ -11,6 +11,7 @@ This play book will do:
 6: Make sure service httpd is running ( start httpd daemon )
 7: enable on boot ( it will do similar to this : chkconfig httpd on ( on 2,3,4,5 runlevels)
 8: Copy index.html (probably) from root directory to /var/www/html 
+9: added IPtable rule to allow httpd ( web ) access
 
 Thats all
 
