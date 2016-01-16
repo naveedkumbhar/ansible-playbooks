@@ -1,0 +1,20 @@
+Install Apache using Ansible
+
+This play book will do:
+
+
+1: install apache ( httpd daemon )
+2: inventory is host which is probably centos-box
+3: install apache using sudo on remote system
+4: and sudo user is root which will perform the task
+5: Install httpd
+6: Make sure service httpd is running ( start httpd daemon )
+7: enable on boot ( it will do similar to this : chkconfig httpd on ( on 2,3,4,5 runlevels)
+8: Copy index.html (probably) from root directory to /var/www/html 
+9: added IPtable rule to allow httpd ( web ) access
+
+Thats all
+
+EOF
+
+email: naveed@predictify.me

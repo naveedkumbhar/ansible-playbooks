@@ -1,0 +1,15 @@
+---
+- hosts: app
+  tasks:
+   - name: Ensure httpd is installed
+     yum: name=httpd state=installed
+   - name: Ensure httpd is running and enabled on boot
+     service: name=httpd state=running enabled=yes
+   - name: Copying index.html
+     copy: src=/root/index.html dest=/var/www/html/index.html mode=777 owner=apache group=apache
+   - name: Apache | add apache iptable rule
+     copy: src=/root/iptables dest=/etc/sysconfig
+   - name: restart iptables
+     service: name=iptables state=restarted
+
+~                                               
